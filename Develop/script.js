@@ -1,16 +1,5 @@
 // Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-// }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+var generateBtn = document.querySelector("#generate");
 
 // Possible Password values
 
@@ -27,7 +16,7 @@ var confirmUpperCase;
 var confirmLowerCase;
 
 // WHEN I click the button to generate a password
-document.querySelector('#generate').addEventListener('click', confirmParameters);
+document.querySelector('#generate').addEventListener('click', confirmParameters,);
 
 // THEN I am presented with a series of prompts for password criteria
 
@@ -45,7 +34,7 @@ function confirmParameters() {
   // WHEN prompted for the length of the password
 
   // How many characters would you like in your password?
-  var confrimLength = parseInt(prompt("How many characters would you like in your password?"));
+  var confirmLength = parseInt(prompt("How many characters would you like in your password? (It must be between 8-128 characters long)"));
   console.log(confirmLength);
 
   // THEN I choose a length of at least 8 characters and no more than 128 characters
@@ -54,3 +43,17 @@ function confirmParameters() {
     console.log('Password length is ' + confirmLength);
   }
 }
+
+
+
+
+
+// Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+// }
+
+// Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
