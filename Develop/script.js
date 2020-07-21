@@ -8,6 +8,7 @@ var lowerCaseValues = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var numberValues = '0123456789'.split('');
 var symbolValues = '`~!@#$%^&*()_+{}[]<>?'.split('');
 var userChoice = [];
+var permittedCharacters = [];
 
 // WHEN I click the button to generate a password
 // generateBtn.addEventListener('click', confirmParameters,);
@@ -28,6 +29,12 @@ var userChoice = [];
   // Would you like to include special symbols in your password?
   var confirmSymbols = confirm("Would you like to include special symbols in your password?")
 
+  if (confirmLowerCase === false && confirmUpperCase == false && confirmNumbers === false && confirmSymbols === false) {
+    alert("You haven't selected any characters, please refresh the page and try again.")
+    var userChoice = lowerCaseValues.concat(upperCaseValues, numberValues, symbolValues);
+    console.log(userChoice);
+  }
+  
   // WHEN prompted for the length of the password
 
   // How many characters would you like in your password?
@@ -36,89 +43,54 @@ var userChoice = [];
   // THEN I choose a length of at least 8 characters and no more than 128 characters
   if (confirmLength <= 7 || confirmLength >= 129) {
     confirmLength = alert("Password must be within 8 to 128 characters, please refresh the page and try again");
-  } else {
-    confirmLength = alert("Lets construct your secure password!");
+  } 
+
+  // Adding all permited characters to the userchoice array
+  if (confirmUpperCase === true) {
+    var userChoice = userChoice.concat(upperCaseValues);
   }
-
-  // if (confirmUpperCase === true) {
-  //   var userChoice = upperCaseValues;
-  //   console.log(userChoice);
-  // }
-
-  // if (confirmLowerCase === true) {
-  //   var userChoice = lowerCaseValues;
-  //   console.log(userChoice);
-  // }
-
-  // if (confirmLowerCase === true && confirmUpperCase == true) {
-  //   var userChoice = lowerCaseValues.concat(upperCaseValues);
-  //   console.log(userChoice);
-  // }
-  
-  // if (confirmNumbers === true) {
-  //   var userChoice = numberValues;
-  //   console.log(userChoice);
-  // }
-
-  // LUNS
-  if (confirmLowerCase === true && confirmUpperCase == true && confirmNumbers === true && confirmSymbols === true) {
-    var userChoice = lowerCaseValues.concat(upperCaseValues, numberValues, symbolValues);
     console.log(userChoice);
-  }
 
+  if (confirmLowerCase === true) {
+    var userChoice = userChoice.concat(lowerCaseValues);
+  }
+  console.log(userChoice);
+
+  if (confirmNumbers === true) {
+    var userChoice = userChoice.concat(numberValues);
+  }
+  console.log(userChoice);
+
+  if (confirmSymbols === true) {
+    var userChoice = userChoice.concat(symbolValues);
+  }
+  console.log(userChoice);
+
+  // Once userChoice is full of selected elements, select random element from the array
 function random_selection(userChoice) {
-  return userChoice[Math.floor(Math.random()*userChoice.lenth)];
+  return userChoice[Math.floor(Math.random()*userChoice.length)];
 }
 console.log(random_selection(userChoice));
 
+for (confirmLength of permittedCharacters) {
+  userChoice.push(i);
+}
+console.log(userChoice);
 
-  // // LUN
-  // if (confirmLowerCase === true && confirmUpperCase == true && confirmNumbers === true && confirmSymbols === false) {
-  //   var userChoice = lowerCaseValues.concat(upperCaseValues, numberValues);
-  //   console.log(userChoice);
-  // }
-
-  // // LUS
-  // if (confirmLowerCase === true && confirmUpperCase == true && confirmNumbers === false && confirmSymbols === true) {
-  //   var userChoice = lowerCaseValues.concat(upperCaseValues, confirmSymbols);
-  //   console.log(userChoice);
-  // }
-
-  // // LNS
-  // if (confirmLowerCase === true && confirmUpperCase == false && confirmNumbers === true && confirmSymbols === true) {
-  //   var userChoice = lowerCaseValues.concat(numberValues, confirmSymbols);
-  //   console.log(userChoice);
-  // }
-
-  // // UNS
-  // if (confirmLowerCase === false && confirmUpperCase == true && confirmNumbers === true && confirmSymbols === true) {
-  //   var userChoice = upperCaseValues.concat(numberValues, confirmSymbols);
-  //   console.log(userChoice);
-  // }
-  
-  
-  // if (confirmSymbols === true) {
-  //   var userChoice = symbolValues;
-  //   console.log(userChoice);
-  // }
-
-// }
+// Print random elements from userChoice into the generated password using "confirmLength" to set the length.
+var permittedCharacters = userChoice.push(random_selection);
+console.log(permittedCharacters);
 
 // WHEN all prompts are answered
 // THEN a password is generated that matches the selected criteria
 
-
-  
-  
-
-
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   password = passwordText;
-// }
+  password = passwordText;
+}
 
 // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
