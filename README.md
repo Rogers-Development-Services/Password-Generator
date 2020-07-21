@@ -1,16 +1,14 @@
-# Rogers Development Services Landing Page
-
-Here at Rogers Development Services (RDS) we pride ourselves on the excellence of any product you want to market online. Our team commitment is to provide an client with excellent Web Design, Coaching, and Technical Writing Services.
+# Password Generator
 
 This password application will generate a random password for the user. Please note this password is not cryptographically secure.
 
-Click this link to access the [Deployed Application](https://rogers-development-services.github.io/Portfolio/index.html)
+Click this link to access the [Deployed Application](https://rogers-development-services.github.io/Password-Generator/)
 
 ## Screenshots
 
-Here is an example of our site in action: three images of our site in action:
+Here is an example of our site in action:
 
-![alt text](https://raw.githubusercontent.com/Rogers-Development-Services/Portfolio/master/Assets/Images/Deployed%20Application.JPG "Application Img1")
+![alt text](https://raw.githubusercontent.com/Rogers-Development-Services/Password-Generator/master/Assets/images/Deployed%20Application.JPG "Application Img1")
 
 ## Usage 
 
