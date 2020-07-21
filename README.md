@@ -1,48 +1,34 @@
-# 03 JavaScript: Password Generator
+# Rogers Development Services Landing Page
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+Here at Rogers Development Services (RDS) we pride ourselves on the excellence of any product you want to market online. Our team commitment is to provide an client with excellent Web Design, Coaching, and Technical Writing Services.
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+This password application will generate a random password for the user. Please note this password is not cryptographically secure.
 
-## User Story
+Click this link to access the [Deployed Application](https://rogers-development-services.github.io/Portfolio/index.html)
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## Screenshots
 
-## Acceptance Criteria
+Here is an example of our site in action: three images of our site in action:
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+![alt text](https://raw.githubusercontent.com/Rogers-Development-Services/Portfolio/master/Assets/Images/Deployed%20Application.JPG "Application Img1")
 
-The following image demonstrates the application functionality:
+## Usage 
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+Click the red "Generate Password" button and respond to the prompts accordingly. Please note your password must be between 8-128 characters long and must contain at least one type of character type.
 
-## Review
+## Is is cryptographically secure?
+No, here's what [cryptographically secure](https://stackoverflow.com/questions/47882737/what-is-meant-by-cryptographically-secure#:~:text=A%20cryptographically%20secure%20pseudo%20random,predict%20what%20it%20might%20be.&text=Also%20the%20processes%20to%20extract,CSPRNG%20can%20sometimes%20be%20used.) means. It's uses javascript's `Math.random()`, see [this article](http://stackoverflow.com/questions/5651789/is-math-random-cryptographically-secure) for refrence. This doesn't mean your password is useless though, it's still better than using 'password123' for each of your passwords.
 
-You are required to submit the following for review:
+## Feedback
 
-* The URL of the deployed application.
+Share with us with any comments or questions to help us grow! Navigate to our Contact Us page to send us a message.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Credits
 
-- - -
+
+
+## License
+
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+Licensed under the [MIT](LICENSE.txt) lincense.
