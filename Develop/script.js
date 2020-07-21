@@ -9,6 +9,7 @@ var numberValues = '0123456789'.split('');
 var symbolValues = '`~!@#$%^&*()_+{}[]<>?'.split('');
 var userChoice = [];
 var permittedCharacters = [];
+var minCharacters = [];
 
 // WHEN I click the button to generate a password
 // generateBtn.addEventListener('click', confirmParameters,);
@@ -72,15 +73,14 @@ function random_selection(userChoice) {
 }
 console.log(random_selection(userChoice));
 
-for (confirmLength of permittedCharacters) {
-  permittedCharacters.push(userChoice);
-}
-console.log(userChoice);
-
 // Print random elements from userChoice into the generated password using "confirmLength" to set the length.
-var permittedCharacters = userChoice.push(random_selection);
-console.log(permittedCharacters);
 
+for (var i = 0; i < confirmLength; i++) {
+  permittedCharacters = minCharacters.push(random_selection(userChoice));
+}
+console.log(minCharacters);
+console.log(permittedCharacters);
+ 
 // WHEN all prompts are answered
 // THEN a password is generated that matches the selected criteria
 
