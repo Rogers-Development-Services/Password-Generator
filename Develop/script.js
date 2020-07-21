@@ -7,18 +7,11 @@ var upperCaseValues = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 var lowerCaseValues = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var numberValues = '0123456789'.split('');
 var symbolValues = '`~!@#$%^&*()_+{}[]<>?'.split('');
-var userChoice = [];
-var defalutChoice =[];
 var permittedCharacters = [];
-var minCharacters = [];
 var passwordText = '';
 
-// WHEN I click the button to generate a password
-// generateBtn.addEventListener('click', confirmParameters,);
-
-// THEN I am presented with a series of prompts for password criteria
-
 function confirmParameters() {
+  var userChoice = [];
 
   // Would you like to include uppercase letters in your password?
   var confirmUpperCase = confirm("Would you like to include uppercase letters in your password?");
@@ -35,11 +28,7 @@ function confirmParameters() {
   // If the user selects none of our options, then restart
   if (confirmLowerCase === false && confirmUpperCase == false && confirmNumbers === false && confirmSymbols === false) {
     alert("You haven't selected any characters, please refresh the page and try again.")
-    var userChoice = lowerCaseValues.concat(upperCaseValues, numberValues, symbolValues);
   }
-  console.log(userChoice);
-
-  // WHEN prompted for the length of the password
 
   // How many characters would you like in your password?
   var confirmLength = parseInt(prompt("How many characters would you like in your password? (It must be between 8-128 characters long)"));
@@ -53,49 +42,46 @@ function confirmParameters() {
   if (confirmUpperCase === true) {
     var userChoice = userChoice.concat(upperCaseValues);
   }
-  console.log(userChoice);
+  // console.log(userChoice);
 
   if (confirmLowerCase === true) {
     var userChoice = userChoice.concat(lowerCaseValues);
   }
-  console.log(userChoice);
+  // console.log(userChoice);
 
   if (confirmNumbers === true) {
     var userChoice = userChoice.concat(numberValues);
   }
-  console.log(userChoice);
+  // console.log(userChoice);
 
   if (confirmSymbols === true) {
     var userChoice = userChoice.concat(symbolValues);
   }
-  console.log(userChoice);
+  // console.log(userChoice);
 
-  // Once userChoice is full of selected elements, select random element from the array
+  // Once userChoice is full of selected elements, run random_selection to select a random element.
   function random_selection(userChoice) {
     return userChoice[Math.floor(Math.random() * userChoice.length)];
   }
-  console.log(random_selection(userChoice));
+  // console.log(random_selection(userChoice));
 
-  // Print random elements from userChoice into the generated password using "confirmLength" to set the length.
+  // Run random_selection for as many times as confirmLength, and store the copied the elements in permittedCharacters. 
 
   for (var i = 0; i < confirmLength; i++) {
-    permittedCharacters = minCharacters.push(random_selection(userChoice));
+    permittedCharacters.push(random_selection(userChoice));
   }
-  console.log(minCharacters);
-  console.log(permittedCharacters);
-}
-console.log(confirmParameters());
+  // console.log(permittedCharacters);
 
-  // WHEN all prompts are answered
-  // THEN a password is generated that matches the selected criteria
+  // Convert the array the confirmParameters is returning as a string
+  return permittedCharacters.join('');
+}
 
 // Write password to the #password input
 function writePassword() {
   var password = confirmParameters();
   var passwordText = document.querySelector("#password");
-  passwordText = password;
+  passwordText.value = password;
 }
-// console.log(writePassword());
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
