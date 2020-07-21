@@ -73,7 +73,7 @@ function random_selection(userChoice) {
 console.log(random_selection(userChoice));
 
 for (confirmLength of permittedCharacters) {
-  userChoice.push(i);
+  permittedCharacters.push(userChoice);
 }
 console.log(userChoice);
 
