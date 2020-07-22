@@ -23,7 +23,9 @@ Share with us with any comments or questions to help us grow! Navigate to our Co
 
 ## Credits
 
+Code template provided by Trilogy Education 
 
+Thanks to Plover Brown, Nick Konzen, Tim Sanders, Zachary Bryan, and Elma Gonzalez for providing guidance.
 
 ## License
 
