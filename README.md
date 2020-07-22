@@ -14,7 +14,7 @@ Here is an example of our site in action:
 
 Click the red "Generate Password" button and respond to the prompts accordingly. Please note your password must be between 8-128 characters long and must contain at least one type of character type.
 
-## Is is cryptographically secure?
+## Is this password cryptographically secure?
 No, here's what [cryptographically secure](https://stackoverflow.com/questions/47882737/what-is-meant-by-cryptographically-secure#:~:text=A%20cryptographically%20secure%20pseudo%20random,predict%20what%20it%20might%20be.&text=Also%20the%20processes%20to%20extract,CSPRNG%20can%20sometimes%20be%20used.) means. It's uses javascript's `Math.random()`, see [this article](http://stackoverflow.com/questions/5651789/is-math-random-cryptographically-secure) for refrence. This doesn't mean your password is useless though, it's still better than using 'password123' for each of your passwords.
 
 ## Feedback
