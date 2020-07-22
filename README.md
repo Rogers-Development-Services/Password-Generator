@@ -1,6 +1,6 @@
 # Password Generator
 
-This password application will generate a random password for the user. Please note this password is not cryptographically secure.
+This application will generate a random password for the user. Please note this password is not cryptographically secure.
 
 Click this link to access the [Deployed Application](https://rogers-development-services.github.io/Password-Generator/)
 
@@ -26,6 +26,10 @@ Share with us with any comments or questions to help us grow! Navigate to our Co
 Code template provided by Trilogy Education 
 
 Thanks to Plover Brown, Nick Konzen, Tim Sanders, Zachary Bryan, and Elma Gonzalez for providing guidance.
+
+Guidance for ADA Compliance was verified using [Accessibility Insights for Web](https://accessibilityinsights.io/docs/en/web/overview)
+
+Application was verified using [Nu Html Checker](https://validator.w3.org/nu/?doc=https%3A%2F%2Frogers-development-services.github.io%2FPassword-Generator%2F) 
 
 ## License
 
