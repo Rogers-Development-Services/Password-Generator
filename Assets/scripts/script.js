@@ -1,29 +1,21 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+import { upperCaseValues, lowerCaseValues, numberValues, symbolValues, permittedCharacters } from '../utils/constants';
 
-// Possible Password values
-
-var upperCaseValues = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-var lowerCaseValues = 'abcdefghijklmnopqrstuvwxyz'.split('');
-var numberValues = '0123456789'.split('');
-var symbolValues = '`~!@#$%^&*()_+{}[]<>?'.split('');
-var permittedCharacters = [];
-var passwordText = '';
+let generateBtn = document.querySelector("#generate");
 
 function confirmParameters() {
-  var userChoice = [];
+  let userChoice = [];
 
   // Would you like to include uppercase letters in your password?
-  var confirmUpperCase = confirm("Would you like to include uppercase letters in your password?");
+  let confirmUpperCase = confirm("Would you like to include uppercase letters in your password?");
 
   // Would you like to include lowercase letters in your password?
-  var confirmLowerCase = confirm("Would you like to include lowercase letters in your password?");
+  let confirmLowerCase = confirm("Would you like to include lowercase letters in your password?");
 
   // Would you like to include numbers in your password?
-  var confirmNumbers = confirm("Would you like to include numbers in your password?");
+  let confirmNumbers = confirm("Would you like to include numbers in your password?");
 
   // Would you like to include special symbols in your password?
-  var confirmSymbols = confirm("Would you like to include special symbols in your password?")
+  let confirmSymbols = confirm("Would you like to include special symbols in your password?")
 
   // If the user selects none of our options, then restart
   if (confirmLowerCase === false && confirmUpperCase == false && confirmNumbers === false && confirmSymbols === false) {
@@ -31,7 +23,7 @@ function confirmParameters() {
   }
 
   // How many characters would you like in your password?
-  var confirmLength = parseInt(prompt("How many characters would you like in your password? (It must be between 8-128 characters long)"));
+  let confirmLength = parseInt(prompt("How many characters would you like in your password? (It must be between 8-128 characters long)"));
 
   // THEN I choose a length of at least 8 characters and no more than 128 characters
   if (confirmLength <= 7 || confirmLength >= 129) {
@@ -40,22 +32,22 @@ function confirmParameters() {
 
   // Adding all permited characters to the userchoice array
   if (confirmUpperCase === true) {
-    var userChoice = userChoice.concat(upperCaseValues);
+    let userChoice = userChoice.concat(upperCaseValues);
   }
   // console.log(userChoice);
 
   if (confirmLowerCase === true) {
-    var userChoice = userChoice.concat(lowerCaseValues);
+    let userChoice = userChoice.concat(lowerCaseValues);
   }
   // console.log(userChoice);
 
   if (confirmNumbers === true) {
-    var userChoice = userChoice.concat(numberValues);
+    let userChoice = userChoice.concat(numberValues);
   }
   // console.log(userChoice);
 
   if (confirmSymbols === true) {
-    var userChoice = userChoice.concat(symbolValues);
+    let userChoice = userChoice.concat(symbolValues);
   }
   // console.log(userChoice);
 
@@ -67,7 +59,7 @@ function confirmParameters() {
 
   // Run random_selection for as many times as confirmLength, and store the copied the elements in permittedCharacters. 
 
-  for (var i = 0; i < confirmLength; i++) {
+  for (let i = 0; i < confirmLength; i++) {
     permittedCharacters.push(random_selection(userChoice));
   }
   // console.log(permittedCharacters);
@@ -78,8 +70,8 @@ function confirmParameters() {
 
 // Write password to the #password input
 function writePassword() {
-  var password = confirmParameters();
-  var passwordText = document.querySelector("#password");
+  let password = confirmParameters();
+  let passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
